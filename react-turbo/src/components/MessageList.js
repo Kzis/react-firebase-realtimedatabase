@@ -23,7 +23,7 @@ class MessageList extends Component {
                               cloned.key = messageKey;
                               return cloned;
                           }).value();
-        console.log(messages);
+        // console.log(messages);
         this.setState({
           messages: messages
         });
