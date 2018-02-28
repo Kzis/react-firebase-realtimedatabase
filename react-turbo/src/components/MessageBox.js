@@ -38,12 +38,12 @@ class MessageBox extends Component {
           <form>
             <textarea
                 className="textarea"
-                placeholder="Type a message"
+                placeholder="Comment"
                 cols="100"
                 onChange={this.onChange}
                 onKeyUp={this.onKeyup}
                 value={this.state.message}>
-              </textarea>
+            </textarea>
           </form>
         )
   }
