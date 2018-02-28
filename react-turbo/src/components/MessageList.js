@@ -18,17 +18,15 @@ class MessageList extends Component {
 
       getData(values){
         let messagesVal = values;
-        let messages = _(messagesVal)
-                          .keys()
-                          .map(messageKey => {
+        let messages = _(messagesVal).keys().map(messageKey => {
                               let cloned = _.clone(messagesVal[messageKey]);
                               cloned.key = messageKey;
                               return cloned;
-                          })
-                          .value();
-          this.setState({
-            messages: messages
-          });
+                          }).value();
+        console.log(messages);
+        this.setState({
+          messages: messages
+        });
       }
 
       render() {
@@ -36,7 +34,7 @@ class MessageList extends Component {
           return (
             <div className="card">
               <div className="card-content">
-                <Message message = {message.message} db={this.props.db} />
+                <Message msgKey={message.key} msg = {message.message} db={this.props.db} />
               </div>
             </div>
           )

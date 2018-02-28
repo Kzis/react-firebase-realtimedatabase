@@ -10,28 +10,22 @@ class Message extends Component {
 
   constructor(props){
     super(props);
-    this.onClick = this.onClickDeleteBtn.bind(this);
-    console.log(props);
+    this.onClickDelete = this.onClickDelete.bind(this);
   }
 
-  onClickDeleteBtn(e){
-    console.log("onClickDeleteBtn");
-
+  onClickDelete(e){
     e.preventDefault();
+    
+    let dbCon = this.props.db.database().ref('/messages');
+    dbCon.child(this.props.msgKey).remove();
 
-    console.log(this);
-    console.log(this.props);
-
-    // let dbCon = this.props.db.database().ref('/messages');
-
-    // console.log(dbCon);
   }
 
   render(){
     return (
       <div>
-        {this.props.message}
-        <a style={deleteBtnStyle} className="button is-danger" onClick={this.onClickDeleteBtn}>
+        {this.props.msg}
+        <a style={deleteBtnStyle} className="button is-danger" onClick={this.onClickDelete}>
           Delete Message
         </a>
       </div>
