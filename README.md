@@ -1,8 +1,7 @@
 # React-Demo-Comment-Message
 <br />
 ![image](https://user-images.githubusercontent.com/25294734/39904090-784b30ea-5500-11e8-9753-b63ac521221e.png)
-<br />
-<br />
+<br /><br /><br />
 Description : React demo project comment message.
 Demo : https://react-turbo-94b01.firebaseapp.com/ <br />
 Reference : https://appdividend.com/2017/07/22/react-firebase-tutorial/ <br />
